@@ -11,7 +11,7 @@ var bodyParser = require('body-parser'); 	// pull information from HTML POST (ex
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 // configuration =================
-//mongoose.connect('mongodb://mhill168:Monday11!>@proximus.modulusmongo.net:27017/wutaQ6eh'); 	// connect to mongoDB database on modulus.io
+mongoose.connect('mongodb://mhill168:Monday11!>@proximus.modulusmongo.net:27017/wutaQ6eh'); 	// connect to mongoDB database on modulus.io
 
 app.use(express.static(__dirname + '/public')); 				// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); 										// log every request to the console
@@ -46,6 +46,11 @@ app.get('/api/todos', function (req, res) {
 		res.json(todos); // return all todos in json format
 
 	});
+});
+
+// application ----------------
+app.get('*', function (req, res) {
+	res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
 // create todo and send back all todos after creation
