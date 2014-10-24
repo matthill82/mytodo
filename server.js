@@ -10,6 +10,9 @@ var morgan = require('morgan'); 			// log requests to the console (express4)
 var bodyParser = require('body-parser'); 	// pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
+// trust the proxy
+app.enable('trust proxy');
+
 // configuration =================
 mongoose.connect('mongodb://mhill168:Monday11!>@proximus.modulusmongo.net:27017/wutaQ6eh'); 	// connect to mongoDB database on modulus.io
 
