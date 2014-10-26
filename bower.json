@@ -1,0 +1,20 @@
+{
+	"name": "my-todo",
+	"version": "0.0.1",
+	"dependencies": {
+		"angular": "*",
+		"json3": "*",
+		"es5-shim": "*",
+		"angular-resource": "*",
+		"angular-cookies": "*",
+		"angular-sanitize": "*",
+		"angular-animate": "*",
+		"angular-touch": "*",
+		"angular-ui-router": "*"
+	},
+	"devDependencies": {
+		"angular-mocks": "*",
+		"angular-scenario": "*"
+	},
+	"appPath": "public"
+}
